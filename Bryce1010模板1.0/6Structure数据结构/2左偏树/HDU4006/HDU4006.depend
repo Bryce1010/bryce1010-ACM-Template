@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1525264526 source:e:\acm-bryce\bryce模板\bryce1010模板1.0\6structure数据结构\2左偏树\hdu4006\main.cpp
+	<iostream>
+	<string.h>
+	<queue>
+	<stdio.h>
+	<string>
+

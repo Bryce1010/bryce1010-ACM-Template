@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1532072266 source:e:\acm-bryce\brycemodule\bryce1010模板1.0\6structure数据结构\1划分树\hdu3473_划分树\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<algorithm>
+	<math.h>
+
