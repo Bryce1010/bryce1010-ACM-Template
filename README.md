@@ -1,5 +1,5 @@
 # No Update here any more!
-if you need the latest new about these code, maybe you can find useful things [here](https://blog.csdn.net/Fire_to_cheat_).
+if you need the latest news about these code, maybe you can find useful things [here](https://blog.csdn.net/Fire_to_cheat_), thanks for your watching.
 
 文件夹是目录（数字代表完成的数量），内含分支题型：
 目录中的文件夹代表的是题目代码，数字表示题目的数量
