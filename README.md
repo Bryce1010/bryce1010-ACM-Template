@@ -2,7 +2,8 @@
 
 ## Ref
 - KuangBin的ACM模板 [[github]](https://github.com/kuangbin/ACM-ICPC)  
-- f-zyj/ACM 模板  
+- f-zyj/ACM 模板 [[github]](https://github.com/f-zyj/ACM)
+
 
 
 
