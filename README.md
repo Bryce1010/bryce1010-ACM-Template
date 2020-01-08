@@ -33,6 +33,63 @@
 - [OI wiki](https://oi-wiki.org/)
 
 
+## 找工作
+
+
+### 算法岗
+
+- [深度学习面试宝典](https://github.com/amusi/Deep-Learning-Interview-Book)
+
+- [知识星球讨论组](https://wx.zsxq.com/dweb2/index/group/init)
+
+- 算法/深度学习/NLP面试笔记:
+  https://github.com/HarleysZhang/2019_algorithm_intern_information
+  https://github.com/imhuay/Algorithm_Interview_Notes-Chinese
+- AI Jobs Notes
+  https://github.com/amusi/AI-Job-Notes
+  **公式：刷题+背题+项目+实习(可选)+竞赛(可选)+顶会/顶刊(可选)**
+- Deep Learning interview book
+  https://github.com/amusi/Deep-Learning-Interview-Book
+
+- 机器学习/算法校招面试考点
+  https://www.nowcoder.com/discuss/165930
+
+- 介绍 CRF和HMM - 用Python实现 K-Means  - 解释一下精确率和召回率 
+- Transformer为什么要加残差 - 对比介绍 CNN，RNN和 LSTM 
+- 朴素贝叶斯为什么被称为“朴素”？ 
+- 高频题：XGBoost和LightGBM的区别 
+- 高频题：Bagging和Boosting的概念与区别 
+- 解释一下支持向量机（SVM）如何学习非线性边界？ 
+- XGBoost里面不同参数主要是什么作用，有哪些参数可以调节？ 
+- 思考题：假设你在 Reddit 数据集上使用循环神经网络或长短时记忆神经网络设计了一个聊天机器人，它能够提供 10 种可能的回复，如何选择最佳回复，或者说如何删除其他的回复？
+
+[RF、GBDT、XGBOOST常见面试算法整理](https://zhuanlan.zhihu.com/p/85995153)
+
+
+
+- [一个双非渣硕的自我救赎之路](https://www.nowcoder.com/discuss/328830?type=0&order=4&pos=1&page=4)
+
+
+
+
+### 研发岗
+- CS-Notes:
+  https://github.com/CyC2018/CS-Notes
+- Linux后台CPP学习之路 & 面经知识点收录
+  https://www.nowcoder.com/discuss/78222
+
+- 后台开发/基础架构方向 学习路线
+  https://www.nowcoder.com/discuss/188367?type=0&order=4&pos=29&page=3
+
+- C++后台开发面试考点汇总
+  https://www.nowcoder.com/discuss/164721?type=0&order=0&pos=16&page=0
+
+- [看开发大神如何只用5个月，拿下美团ssp顶薪offer](https://www.nowcoder.com/discuss/331574?toCommentId=4824987)
+
+- [秋招总结：非机器学习科班学生漫长的算法工程师上岸之旅](https://www.nowcoder.com/discuss/326300)
+
+- [ACMer的秋招总结与经验分享](https://www.nowcoder.com/discuss/338853?type=0&order=4&pos=10&page=2)
+
 
 
 
