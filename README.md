@@ -8,7 +8,9 @@
 ### String 字符串  
 - [x] 编辑距离 (f-zjy) 
 
-
+### 精选技巧
+#### 双指针  
+- [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
 
 
 ## Leetcode
