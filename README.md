@@ -58,7 +58,7 @@ class Backtracking(object):
 
 
 ### 精选技巧
-#### 双指针  
+#### 1. 双指针  
 - [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
 
 
