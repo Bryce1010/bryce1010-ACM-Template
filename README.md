@@ -44,7 +44,7 @@ class Backtracking(object):
 
 - [[Leetcode 17 电话号码的字母组合]](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
 - [[Leetcode 22 括号生成]](https://leetcode-cn.com/problems/generate-parentheses/)
-- [ ] [[Leetcode 46 全排列]](https://leetcode-cn.com/problems/permutations/)
+- [[Leetcode 46 全排列]](https://leetcode-cn.com/problems/permutations/)
 - [ ] [[Leetcode 47 全排列II]](https://leetcode-cn.com/problems/permutations-ii/)  
 
 
