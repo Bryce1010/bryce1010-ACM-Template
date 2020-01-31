@@ -31,6 +31,7 @@
 - [算法竞赛入门经典](https://github.com/dzsky/fucksky/blob/master/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89%20(%E7%AE%97%E6%B3%95%E8%89%BA%E6%9C%AF%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B).pdf) 
 - [学习资源](https://oi-wiki.org/intro/resources/)  
 - [OI wiki](https://oi-wiki.org/)
+- [[OI & ACM 课件分享]](https://github.com/hzwer/shareOI)  
 
 
 ## 找工作
