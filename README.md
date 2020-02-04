@@ -107,10 +107,10 @@ class Backtracking(object):
         return self.res
 ```
 
-- [[Leetcode 17 电话号码的字母组合]](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
-- [[Leetcode 22 括号生成]](https://leetcode-cn.com/problems/generate-parentheses/)
-- [[Leetcode 46 全排列]](https://leetcode-cn.com/problems/permutations/)
-- [[Leetcode 47 全排列II]](https://leetcode-cn.com/problems/permutations-ii/)  
+- [x] [[Leetcode 17 电话号码的字母组合]](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+- [x] [[Leetcode 22 括号生成]](https://leetcode-cn.com/problems/generate-parentheses/)
+- [x] [[Leetcode 46 全排列]](https://leetcode-cn.com/problems/permutations/)
+- [x] [[Leetcode 47 全排列II]](https://leetcode-cn.com/problems/permutations-ii/)  
 
 
 
@@ -124,7 +124,7 @@ class Backtracking(object):
 
 ### 精选技巧
 #### 1. 双指针  
-- [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
+- [x] [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
 
 
 #### 2. 二分
