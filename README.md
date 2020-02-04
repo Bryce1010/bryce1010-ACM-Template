@@ -5,6 +5,71 @@
 - f-zyj/ACM 模板 [[github]](https://github.com/f-zyj/ACM)
 
 
+### STL  
+1. 顺序容器      
+	- vector：后部插入/删除，直接访问   
+    - deque：前/后部插入/删除，直接访问  
+    - list：双向链表，任意位置插入/删除
+    
+2. 关联容器  
+	- set：快速查找，无重复元素  
+    - multiset ：快速查找，可有重复元素  
+    - map：一对一映射，无重复元素，基于关键字查找
+    - multimap ：一对一映射，可有重复元素，基于关键字查找  
+前2者合称为第一类容器  
+
+
+3. 容器适配器  
+	- stack：LIFO
+    - queue：FIFO
+    - priority_queue：优先级高的元素先出  
+
+#### 1.1 共有成员函数
+相当于按词典顺序比较两个容器大小的运算符：   
+- =, < , <= , >  , >=, == , !=
+- empty : 判断容器中是否有元素
+- max_size: 容器中最多能装多少元素
+- size:   容器中元素个数
+- swap: 交换两个容器的内容
+
+#### 1.2 只在第一类容器中的函数
+- begin  返回指向容器中第一个元素的迭代器
+- end     返回指向容器中最后一个元素后面的位置的迭代器
+- rbegin  返回指向容器中最后一个元素的迭代器
+- rend    返回指向容器中第一个元素前面的位置的迭代器
+- erase   从容器中删除一个或几个元素
+- clear   从容器中删除所有元素
+
+#### 1.3 STL通用算法
+STL中提供能在各种容器中通用的算法，比如插入，删除，查找，排序等。大约有70种标准算法。
+- find
+```cpp
+find(InIt first, InIt last, const T& val); 
+first 和 last 这两个参数都是容器的迭代器，它们给出了容器中的查找区间起点和终点。
+val参数是要查找的元素的值
+函数返回值是一个迭代器。如果找到，则该迭代器指向被找到的元素。如果找不到，则该迭代器指向查找区间终点。
+```
+
+- copy
+```cpp
+OutIt copy(InIt first, InIt last, OutIt x); 
+copy (v.begin(),v.end(),output);
+对于copy (v.begin(),v.end(),output);
+first 和 last 的类型是  vector<int>::const_iterator
+output 的类型是 ostream_iterator<int> 
+```
+
+#### 1.4 顺序容器成员函数
+- front()  :返回容器中第一个元素的引用
+- back() : 返回容器中最后一个元素的引用
+- push_back(): 在容器末尾增加新元素
+- pop_back(): 删除容器末尾的元素
+
+#### 1.5 STL数据结构
+查询[[f_zyj模板]](
+
+
+
 ### 递归回溯
 教程:  [[递归与回溯的理解]](https://cloud.tencent.com/developer/article/1434886)  [[手把手教怎么写递归和回溯]](https://leetcode-cn.com/circle/article/GV6eQ2/)   
 
