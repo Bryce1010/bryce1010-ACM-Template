@@ -127,6 +127,28 @@ class Backtracking(object):
 - [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
 
 
+#### 2. 二分
+
+
+#### 3. 排序
+
+- 归并排序
+归并排序是基于分治思想的排序方法。
+归并排序a[l,r]的算法，简要描述为：
+（1）将a[l,r]拆成a[l,mid],a[mid+1,r]两部分
+（2）调用MergeSort(l,mid)和MerSort(mid+1,r),将这两部分分别排好序
+（3）合并排好序的两部分，覆盖a[l,r]
+
+关于合并过程：
+（1）如果A取完，那么直接从B中取；
+（2）如果B取完，那么直接从A中取；
+（3）如果A，B都没取完，那么从A，B的头部，取更小的那个；
+
+
+- 快排
+
+
+
 ## Leetcode
 
 ### 在线平台   
