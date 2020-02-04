@@ -127,7 +127,62 @@ class Backtracking(object):
 - [x] [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
 
 
-#### 2. 二分
+#### 2. 二分  
+[[二分讲解参考]](https://blog.csdn.net/CCSGTC/article/details/80586181)  
+
+- 左闭右开  
+[l,r）  
+```cpp
+int l=0,r=n;
+while(l<r)
+{
+	r=middle;
+	l=middle+1;
+}
+```
+
+
+
+- 左闭右闭  
+[l,r]   
+```cpp
+int l=0,r=n-1;
+while(l<=r)
+{
+	r=middle+1;
+	l=middle-1;
+}
+```
+
+- 左开右开  
+(l,r)   
+```cpp
+int l=-1,r=n;
+while(l+1!=r)
+{
+	r=middle;
+	l=middle;
+}
+```
+- 二分模板 (求非下降序列的首次首次出现的位置) 
+```cpp
+int binary(int array[],int n,int target)
+{
+    int left,right,middle;
+    left=-1,right=n;
+    while(left+1!=right){
+        middle=left+(right-left)/2;
+        if(array[middle]>=target){
+            right=middle;
+        }else{
+            left=middle;
+        }
+    }
+    if(right==n||array[right]!=target)
+        return -1;
+    return right;
+}
+```
 
 
 #### 3. 排序
