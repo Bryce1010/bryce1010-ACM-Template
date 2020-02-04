@@ -132,7 +132,7 @@ class Backtracking(object):
 
 #### 3. 排序
 
-- 归并排序  
+- **归并排序**  
 时间复杂度： O(nlogn)   
 归并排序是基于分治思想的排序方法。  
 归并排序a[l,r]的算法，简要描述为：  
@@ -142,12 +142,98 @@ class Backtracking(object):
 关于合并过程：  
 （1）如果A取完，那么直接从B中取；  
 （2）如果B取完，那么直接从A中取；  
-（3）如果A，B都没取完，那么从A，B的头部，取更小的那个；  
-  
+（3）如果A，B都没取完，那么从A，B的头部，取更小的那个；    
+```cpp
+int source[100],target[100];
+void merge(int left,int mid,int right)
+{
+    int i=left,j=mid+1,k=left;
+    while(i<=mid&&j<=right)
+    {
+        if(source[i]<source[j])
+        {
+            target[k++]=source[i++];
+        }
+        else
+        {
+            target[k++]=source[j++];
+        }
+    }
+    while(i<=mid)
+    {
+       target[k++]=source[i++];
+    }
+    while(j<=right)
+    {
+        target[k++]=source[j++];
+    }
+    for(int ss=left;ss<=right;++ss)
+        source[left]=target[left];
 
-- 快排  
+}
+void MergeSort(int left,int right)
+{
+    int mid=(left+right)/2;
+    MergeSort(left,mid);
+    MergeSort(mid+1,right);
+    merge(left,mid,right);
+}
 
-  
+```
+ 
+- **快排**     
+时间复杂度：O(nlogn)   
+以身高排序为例：  
+（1）选择一个人  
+（2）将比这个人矮的放到左边去  
+（3）将比这个人高的放到右边去  
+（4）对这个人坐便和右边分别进行相似的递归排序  
+```cpp
+template<class Type>
+int partition(Type array[],int left,int right)
+{
+    int flag=array[left];
+    while(left<right)
+    {
+        //put all x < flag to left
+        while(left<right&&array[right]>=flag)
+        {
+            right--;
+        }
+        if(left<right)
+        {
+            array[left]=array[right];
+            left++;
+        }
+        //put all x>flag to right
+        while(left<right&&array[left]<=flag)
+        {
+            left++;
+        }
+        if(left<right)
+        {
+            array[right] = array[left];
+            right--;
+        }
+    }
+    //left and right 重合时，将flag放置中间
+    array[left]=flag;
+    return left;
+}
+template<class Type>
+void quick_sort(Type array[],int left,int right)
+{
+    if(left<right)
+    {
+        int position=partition(array,left,right);
+        quick_sort(array,left,position-1);
+        quick_sort(array,position+1,right);
+    }
+}
+```
+
+
+
 
 ## Leetcode
 
