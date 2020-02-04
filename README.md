@@ -133,6 +133,7 @@ class Backtracking(object):
 #### 3. 排序
 
 - 归并排序  
+时间复杂度： O(nlogn)   
 归并排序是基于分治思想的排序方法。  
 归并排序a[l,r]的算法，简要描述为：  
 （1）将a[l,r]拆成a[l,mid],a[mid+1,r]两部分  
