@@ -66,7 +66,7 @@ output 的类型是 ostream_iterator<int>
 - pop_back(): 删除容器末尾的元素
 
 #### 1.5 STL数据结构
-查询[[f_zyj模板]](
+查询[[f_zyj模板]](https://github.com/f-zyj/ACM/blob/master/ACM%20%E6%A8%A1%E7%89%88-f_zyj%20%E6%9B%B4%E6%96%B0%E8%87%B3%20v%202.1/v%202.1/ACM%E6%A8%A1%E6%9D%BF-f_zyj%20v%202.1.pdf)
 
 
 
