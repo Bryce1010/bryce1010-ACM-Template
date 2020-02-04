@@ -199,6 +199,8 @@ int binary(int array[],int n,int target)
 }
 ```
 
+- 二分搜索题集 [[leetcode]](https://leetcode-cn.com/tag/binary-search/)  
+
 
 #### 3. 排序
 
