@@ -138,7 +138,6 @@ class Backtracking(object):
 （1）将a[l,r]拆成a[l,mid],a[mid+1,r]两部分  
 （2）调用MergeSort(l,mid)和MerSort(mid+1,r),将这两部分分别排好序  
 （3）合并排好序的两部分，覆盖a[l,r]  
-
 关于合并过程：  
 （1）如果A取完，那么直接从B中取；  
 （2）如果B取完，那么直接从A中取；  
