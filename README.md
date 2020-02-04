@@ -118,6 +118,21 @@ class Backtracking(object):
 - [x] 编辑距离 (f-zjy) 
 
 
+### 搜索
+
+
+#### DFS
+
+
+
+#### BFS
+
+
+#### 启发式搜索
+
+
+
+### 动态规划 DP
 
 
 
