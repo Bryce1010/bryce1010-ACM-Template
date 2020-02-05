@@ -114,10 +114,10 @@ class Backtracking(object):
         return self.res
 ```
 
-- [x] [[Leetcode 17 电话号码的字母组合]](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
-- [x] [[Leetcode 22 括号生成]](https://leetcode-cn.com/problems/generate-parentheses/)
-- [x] [[Leetcode 46 全排列]](https://leetcode-cn.com/problems/permutations/)
-- [x] [[Leetcode 47 全排列II]](https://leetcode-cn.com/problems/permutations-ii/)  
+- [x] (中等)Leetcode 17 电话号码的字母组合[[problem]](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/)
+- [x] (中等)Leetcode 22 括号生成[[problem]](https://leetcode-cn.com/problems/generate-parentheses/)
+- [x] (中等)Leetcode 46 全排列[[problem]](https://leetcode-cn.com/problems/permutations/)
+- [x] (中等)Leetcode 47 全排列II[[problem]](https://leetcode-cn.com/problems/permutations-ii/)  
 
 
 
@@ -146,7 +146,7 @@ class Backtracking(object):
 
 ### 精选技巧
 #### 1. 双指针  
-- [x] [[leetcode 16. 最接近的三数之和]](https://leetcode-cn.com/problems/3sum-closest/)  
+- [x] (中等)leetcode 16. 最接近的三数之和[[problem]](https://leetcode-cn.com/problems/3sum-closest/)  
 
 
 #### 2. 二分  
@@ -206,7 +206,12 @@ int binary(int array[],int n,int target)
 }
 ```
 
-- 二分搜索题集 [[leetcode]](https://leetcode-cn.com/tag/binary-search/)  
+- 二分搜索题集 [[leetcode]](https://leetcode-cn.com/tag/binary-search/)     
+- [ ] (困难)Leetcode 4. 寻找两个有序数组的中位数 [[problem]](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)    
+- [ ] (中等)Leetcode 29. 两数相除 [[problem]](https://leetcode-cn.com/problems/divide-two-integers/)  
+- [ ] (中等)Leetcode 33.搜索旋转排序数组  [[problem]](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)  
+- [ ] (中等)Leetcode 34. 在排序数组中查找元素的第一个和最后一个位置 [[problem]](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
+- [ ] (中等)Leetcode 50. Pow(x, n) [[problem]](https://leetcode-cn.com/problems/powx-n/)
 
 
 #### 3. 排序
