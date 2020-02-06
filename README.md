@@ -246,8 +246,8 @@ while(l<r)
 int l=0,r=n-1;
 while(l<=r)
 {
-	r=middle+1;
-	l=middle-1;
+	r=middle-1;
+	l=middle+1;
 }
 ```
 
@@ -283,10 +283,21 @@ int binary(int array[],int n,int target)
 
 - 二分搜索题集 [[leetcode]](https://leetcode-cn.com/tag/binary-search/)     
 - [ ] (困难)Leetcode 4. 寻找两个有序数组的中位数 [[problem]](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)    
-- [ ] (中等)Leetcode 29. 两数相除 [[problem]](https://leetcode-cn.com/problems/divide-two-integers/)  
-- [ ] (中等)Leetcode 33.搜索旋转排序数组  [[problem]](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)  
-- [ ] (中等)Leetcode 34. 在排序数组中查找元素的第一个和最后一个位置 [[problem]](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  
-- [ ] (中等)Leetcode 50. Pow(x, n) [[problem]](https://leetcode-cn.com/problems/powx-n/)
+- [x] (中等)Leetcode 29. 两数相除 [[problem]](https://leetcode-cn.com/problems/divide-two-integers/)  
+- [x] (中等)Leetcode 33.搜索旋转排序数组  [[problem]](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) [[题解]]  
+- [x] (中等)Leetcode 34. 在排序数组中查找元素的第一个和最后一个位置 [[problem]](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)    
+- [ ] (中等)Leetcode 50. Pow(x, n) [[problem]](https://leetcode-cn.com/problems/powx-n/)  
+- [ ] (中等)Leetcode 74. 搜索二维矩阵 [[problem]](https://leetcode-cn.com/problems/search-a-2d-matrix/)    
+- [ ] (中等)Leetcode 81. 搜索旋转排序数组 II [[problem]](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)  
+- [ ] (中等)Leetcode 153. 寻找旋转排序数组中的最小值 [[problem]](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)   
+- [ ] (困难)Leetcode 154. 寻找旋转排序数组中的最小值 II [[problem]](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)   
+- [ ] (中等)Leetcode 162. 寻找峰值 [[problem]](https://leetcode-cn.com/problems/find-peak-element/)   
+
+
+
+
+
+
 
 
 ### 3. 排序
