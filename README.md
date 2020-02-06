@@ -284,7 +284,7 @@ int binary(int array[],int n,int target)
 - 二分搜索题集 [[leetcode]](https://leetcode-cn.com/tag/binary-search/)     
 - [ ] (困难)Leetcode 4. 寻找两个有序数组的中位数 [[problem]](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)    
 - [x] (中等)Leetcode 29. 两数相除 [[problem]](https://leetcode-cn.com/problems/divide-two-integers/)  
-- [x] (中等)Leetcode 33.搜索旋转排序数组  [[problem]](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) [[题解]]  
+- [x] (中等)Leetcode 33.搜索旋转排序数组  [[problem]](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) [[题解]](https://blog.csdn.net/Fire_to_cheat_/article/details/104196694)    
 - [x] (中等)Leetcode 34. 在排序数组中查找元素的第一个和最后一个位置 [[problem]](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)    
 - [ ] (中等)Leetcode 50. Pow(x, n) [[problem]](https://leetcode-cn.com/problems/powx-n/)  
 - [ ] (中等)Leetcode 74. 搜索二维矩阵 [[problem]](https://leetcode-cn.com/problems/search-a-2d-matrix/)    
