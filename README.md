@@ -281,6 +281,26 @@ int binary(int array[],int n,int target)
 }
 ```
 
+#### 快速幂  
+
+```cpp
+Matrix quickPower(Matrix A, int k){
+    Matrix result=I;
+    while(k>0)
+    {
+        if(k%1==1)result=result*A;
+        k=k/2;
+        result=A*A;
+    }
+    return result;
+}
+```
+
+
+
+
+
+
 - 二分搜索题集 [[leetcode]](https://leetcode-cn.com/tag/binary-search/)     
 - [ ] (困难)Leetcode 4. 寻找两个有序数组的中位数 [[problem]](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)    
 - [x] (中等)Leetcode 29. 两数相除 [[problem]](https://leetcode-cn.com/problems/divide-two-integers/)  
@@ -401,6 +421,10 @@ void quick_sort(Type array[],int left,int right)
     }
 }
 ```
+
+
+
+
 
 
 
