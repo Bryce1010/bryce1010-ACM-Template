@@ -225,6 +225,8 @@ c. 高效性
 - 枚举深度。  
 - 根据限定的深度进行DFS，并且利用估价函数进行剪枝。  
 
+
+#### DFS题集
 - [ ] [Red and Black](http://poj.org/problem?id=1979)        ★☆☆☆☆   FloodFill
 
 - [ ] [The Game](http://poj.org/problem?id=1970)          ★☆☆☆☆   FloodFill
@@ -377,6 +379,7 @@ def BFS(v):
 在搜索的时候，结点信息要用堆（优先队列）维护大小，即能更快到达目标的结点优先弹出。
 
 
+#### BFS题集
 
 
 - [ ] [Pushing Boxes](http://poj.org/problem?id=1475)        ★☆☆☆☆   经典广搜 - 推箱子
