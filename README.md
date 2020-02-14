@@ -12,7 +12,7 @@
 ## Ref
 - KuangBin的ACM模板 [[github]](https://github.com/kuangbin/ACM-ICPC)  
 - f-zyj/ACM 模板 [[github]](https://github.com/f-zyj/ACM)
-
+- 面试算法笔记 [[github]](https://github.com/imhuay/Algorithm_for_Interview-Chinese)   
 
 ## STL  
 1. 顺序容器      
