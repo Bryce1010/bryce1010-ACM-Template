@@ -840,7 +840,8 @@ void quick_sort(Type array[],int left,int right)
 #### 第 176 场周赛
 - 5340. 统计有序矩阵中的负数
 - 5341. 最后 K 个数的乘积
-- [x] 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) - [x] 5343. 多次求和构造目标数组 [[problem]](https://leetcode-cn.com/problems/construct-target-array-with-multiple-sums/)     
+- 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
+- [x] 5343. 多次求和构造目标数组 [[problem]](https://leetcode-cn.com/problems/construct-target-array-with-multiple-sums/)     
 
 
 
