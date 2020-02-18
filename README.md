@@ -1048,7 +1048,13 @@ ref:
 - 夜深人静写算法——动态规划 [[blog]](http://www.cppblog.com/menjitianya/archive/2015/10/23/212084.html)   
 
 ### 一、动态规划初探
-#### 1、递推
+#### 1、递推   
+
+- 5.最长回文子串 [[problem]](https://leetcode-cn.com/problems/longest-palindromic-substring/)  
+- 62.不同路径 [[problem]](https://leetcode-cn.com/problems/unique-paths/)  
+- 63.不同路径 II [[problem]](https://leetcode-cn.com/problems/unique-paths-ii/)  
+
+
 #### 2、记忆化搜索   
 递推说白了就是在知道前i-1项的值的前提下，计算第i项的值，而记忆化搜索则是另外一种思路。它是直接计算第i项，需要用到第 j 项的值( j < i)时去查表，如果表里已经有第 j 项的话，则直接取出来用，否则递归计算第 j 项，并且在计算完毕后把值记录在表中。记忆化搜索在求解多维的情况下比递推更加方便。  
 
@@ -1097,11 +1103,6 @@ ref:
 ### 五、动态规划题集整理
 
 
-
-
-- 5. 最长回文子串 [[problem]](https://leetcode-cn.com/problems/longest-palindromic-substring/)  
-- 62. 不同路径 [[problem]](https://leetcode-cn.com/problems/unique-paths/)  
-- 63. 不同路径 II [[problem]](https://leetcode-cn.com/problems/unique-paths-ii/)  
 
 
 
