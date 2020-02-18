@@ -1074,13 +1074,16 @@ ref:
 - [ ] Number Cutting Game  [[problem]](http://acm.hdu.edu.cn/showproblem.php?pid=2848)                         ★★★☆☆
 
 #### 3、状态和状态转移  
-  
+
 #### 4、最优化原理和最优子结构   
 #### 5、决策和无后效性   
 
 ### 二、动态规划的经典模型
 #### 1、线性模型   
-- [x] 72. 编辑距离    
+- [x] 72. 编辑距离  [[problem]](https://leetcode-cn.com/problems/edit-distance/)     
+- [ ] 73. 85. 最大矩形 [[problem]](https://leetcode-cn.com/problems/maximal-rectangle/)  [[直方图O(N\*N\*M]]  [[DP O(N\*M)]]  
+
+
 
 #### 2、区间模型
 #### 3、背包模型
@@ -1320,7 +1323,7 @@ void quick_sort(Type array[],int left,int right)
 
 
 
-
+- [x] 72. 编辑距离 
 ## Leetcode
 
 ### 在线平台   
