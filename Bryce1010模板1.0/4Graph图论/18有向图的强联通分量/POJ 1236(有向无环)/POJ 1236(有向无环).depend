@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1529396174 source:e:\acm-bryce\brycemodule\bryce1010模板1.0\4graph图论\18有向图的强联通分量\poj 1236(有向无环)\main.cpp
+	<iostream>
+	<vector>
+	<string.h>
+	<algorithm>
+	<stdio.h>
+

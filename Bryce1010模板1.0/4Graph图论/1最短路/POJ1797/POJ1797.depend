@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1527434346 source:g:\acm-bryce\brycemodule\bryce1010模板1.0\4graph图论\1最短路\poj1797\main.cpp
+	<iostream>
+	<algorithm>
+	<string.h>
+	<math.h>
+
+1527485152 source:e:\acm-bryce\brycemodule\bryce1010模板1.0\4graph图论\1最短路\poj1797\main.cpp
+	<iostream>
+	<algorithm>
+	<string.h>
+	<math.h>
+
