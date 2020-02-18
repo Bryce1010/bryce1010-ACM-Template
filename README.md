@@ -16,21 +16,567 @@
 
 ## STL  
 ### 1. heap
+```cpp
+/*
+堆
+常用有两种构建堆的方式：
+    1. 使用“优先队列”
+    2. 使用`make_heap` (todo)
+*/
+#pragma once
+
+#include "../../all.h"
+#include <queue>
+using namespace std;
+
+class Solution {
+public:
+    struct node {
+        int v1;
+        int v2;
+        //bool operator () (const node &l, const node &r) {
+        //    return l.v1 != r.v1 ? l.v1 < r.v1 : l.v2 < r.v2;
+        //}
+    };
+
+    // 仿函数比较器 - 降序
+    struct cmp {
+        bool operator () (int l, int r) {
+            return l > r;
+        }
+    };
+    // 自定义比较：先比较元素 1，再比较元素 2
+    struct cmp2 {
+        bool operator () (const node &l, const node &r) {
+            return l.v1 != r.v1 ? l.v1 < r.v1 : l.v2 < r.v2;
+        }
+    };
+
+    void test() {
+        // vector 转优先队列
+        //   如果是传统 ACM 的数据读取方式，可以不必这么做，在读取数据时，直接传入优先队列
+        //   如果是 LeetCode 的方式，如果直接接受的是一个 vec 参数，那么可能需要用到这种方法
+        vector<int> v1 = { 1,2,3 };
+        //priority_queue<int> p1(v1);  // 没有直接将 vec 转 pri_que 的构造
+        priority_queue<int> p1(v1.begin(), v1.end());
+        cout << p1.top() << endl;  // 3
+
+        // 添加数据
+        p1.push(5);
+        // 获取顶部数据
+        auto top = p1.top();
+        cout << top<< endl;  // 5
+        // 弹出顶部数据
+        p1.pop();   // 没有返回值，所以如果要使用顶部的数据，需要先接收
+
+        // 数组转优先队列
+        int arr[] = { 1,2,3 };
+        priority_queue<int, vector<int>, cmp> p2(arr, arr + 3); // 使用仿函数构建最小堆，默认最大堆
+        cout << p2.top() << endl;  // 1
+
+        // 自定义结构体
+        node arr2[] = { {1, 1}, {2, 2}, {2, 4}, {2, 3}, {1, 2} };
+        priority_queue<node, vector<node>, cmp2> p3(arr2, arr2 + 5);
+        p3.pop();  // {2, 4}
+        p3.pop();  // {2, 3}
+        p3.pop();  // {2, 2}
+        p3.pop();  // {1, 2}
+        p3.pop();  // {1, 1}
+    }
+};
+```
+
 
 ### 2. list
+```cpp
+/*
+链表常用操作：
+    1. 前插
+    2. 尾插
+    3. 指定位置插入
+    4. 查找
+    5. 删除
+    6. 移除全部某个值
+链表的使用频率不高
+注意：
+    链表的迭代器不支持随机存取，即 `l.begin() + 1` 这种操作
+*/
+#pragma once
 
+#include "../../all.h"
+#include <list>
+
+using namespace std;
+
+class Solution {
+public:
+    void test() {
+        list<int> l1{ 1,2,3,4,5 };
+
+        // 前插
+        l1.push_front(0);
+        // 获取第一个元素
+        auto top = l1.front();
+        cout << top << endl;        // 0
+        // 弹出第一个元素
+        l1.pop_front();
+        cout << l1.front() << endl; // 1
+
+        // 尾插
+        l1.push_back(6);
+        // 获取最后一个元素
+        auto back = l1.back();
+        cout << back << endl;       // 6
+        // 弹出最后一个元素
+        l1.pop_back();
+        cout << l1.back() << endl;  // 5
+
+        // 删除
+        auto ret = find(l1.begin(), l1.end(), 3);
+        cout << *ret << endl;
+        l1.erase(ret);
+        ret = find(l1.begin(), l1.end(), 3);
+        if (ret == l1.end())
+            cout << "have erase 3" << endl;
+
+        // 移除某个值，会全部移除，如果该值不存在，无返回值
+        ret = find(l1.begin(), l1.end(), 5);
+        cout << *ret << endl;
+        l1.push_back(5);    // 再添加一个 5
+        l1.push_back(5);    // 再添加一个 5
+        cout << l1.size() << endl;  // 6
+        l1.remove(5);       // 移除所有 5
+        cout << l1.size() << endl;  // 3
+        ret = find(l1.begin(), l1.end(), 5);
+        if (ret == l1.end())
+            cout << "have remove all 5" << endl;
+
+        // 插入 - 有 4 种插入
+        l1.insert(l1.begin(), 3);       // 1. 在开头插入 3
+        l1.insert(l1.begin(), 5, 3);    // 2. 在开头插入 5 个 3
+        l1.insert(l1.begin(), l1.begin(), l1.end());    // 3. 在指定位置插入一个范围
+        l1.insert(l1.begin(), { 1,2,3 });               // 4. 在指定位置插入一个初始化列表
+
+        // 清空
+        l1.clear();
+    }
+
+    
+};
+```
 
 ### 3. map
+```cpp
+/*
+字典 map
+注意：
+    map 没有内置通过 value 找 key 的方法
+        一种当然是迭代器遍历，
+        下面还介绍了一种更高级的方法，通过 lambda 表达式查找
+*/
+#pragma once
 
+#include <map>
+#include <iostream>
+
+using namespace std;
+
+class Solution {
+public:
+    void test() {
+        // 构造函数
+        map<int, int> m1{ { 1,2 },{ 2,3 },{ 3,4 } };
+        map<int, int> m2(m1.begin(), m1.end());
+        map<int, int> m3(m2);
+
+        m3[1] = 3;  // 更新
+        m3[4] = 5;  // 插入，无返回值
+        
+        // 插入，如果存在则插入失败；注意与 [] 的区别
+        pair<map<int, int>::iterator, bool> ret;
+        ret = m3.insert(pair<int, int>(1, 4));
+        if (ret.second == false)
+            cout << "exist" << endl;
+
+        // hint 插入（不常用）
+        auto it = m3.begin();
+        it = m3.insert(it, pair<int, int>(6, 7));  // 效率不是最高的
+        // 这个跟效率有关，不深入
+        // > 我在 stack overflow 上的提问：
+        //      c++ - Does it matter that the insert hint place which is close the final place is before or after the final place? - Stack Overflow https://stackoverflow.com/questions/49653112/does-it-matter-that-the-insert-hint-place-which-is-close-the-final-place-is-befo
+
+        // C++11 新语法，更快
+        ret = m3.emplace(5, 6);  // 插入成功
+        ret = m3.emplace(1, 4);  // 插入失败，key=1 存在了
+        it = m3.emplace_hint(it, 8, 9);  // hint 插入
+
+        // 删除 by key
+        m3.erase(3);  
+
+        // 查找 by key
+        it = m3.find(7);  // 删除 by iterator
+        if (it == m3.end())
+            m3[7] = 77;
+
+        // 查找 by value
+        // 遍历方法，略
+        // lambda 方法
+        int v = 77;
+        it = find_if(m3.begin(), m3.end(),
+            [v](const std::map<int, int>::value_type item) {
+            return item.second == v;
+        });
+        if (it != m3.end()) {
+            int k = (*it).first;
+            cout << k << endl; // 7
+        }
+        // 此外，还有函数对象的方式
+        // > C++ map 根据value找key - CSDN博客 https://blog.csdn.net/flyfish1986/article/details/72833001
+
+        for (auto& i : m3)
+            cout << i.first << ": " << i.second << endl;
+    }
+
+    
+};
+```
 
 ### 4. queue
+```cpp
+/*
+队列：
+    队列的性质是“先进先出”
+    队列包括常规的队列 queue 和双端队列 deque
+    queue 的内部就是 deque 实现的，
+    因为双端队列包括的队列的所有功能，所以推荐使用 deque —— 它会使用 _front 和 _back 来区分头插和尾插
+    因为 list 也满足 queue 的接口，所以可以使用 list 作为 queue 背后的容器
+*/
+#pragma once
 
+#include <list>
+#include <deque>
+#include <vector>
+#include <queue>
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+class Solution {
+public:
+    void test() {
+        // 双端队列
+        deque<int> d1 = { 1,2,3 };
+
+        d1.push_front(0);  // {0,1,2,3}
+        for (auto i : d1)
+            cout << i << ' ';
+        cout << endl;
+
+        auto front_val = d1.front();
+        d1.pop_front();  // {1,2,3}
+        for (auto i : d1)
+            cout << i << ' ';
+        cout << endl;
+
+        // 一般队列
+        queue<int> q1(d1);
+        q1.push(12);
+
+        // 因为 list 也满足 queue 的接口，所以可以使用 list 作为 queue 背后的容器
+        list<int> l = { 1,2,3,4,5 };
+        queue<int, list<int>> q2(l);
+
+        //queue<int> q3{ 1,2,3 };  // error，没有相应的构造函数
+        //queue<int, vector<int>> q4;  // warning
+    }
+};
+
+```
 ### 5. set
+```cpp
+/*
+集合 set
+    set 和 map 基本一致，相当于没有 value 的 map，或者说的 map 的 key 就是一个 set
+    因此，set 跟 map 的 key 一样是不允许重复的
+    如果需要重复，可以使用 multiset
+    set 的内部实现默认是红黑树——Python 默认是 HashSet
+        因此 set 中的元素是默认有序的——升序
+        如果需要降序的 set，可以使用仿函数
+    ~~STL 也提供了 hash_set 的实现~~
+    STL 已经移除了 hash_set，改用 unordered_set 实现 Hash Set（可能）
+        注意：使用 unordered_set 并不会改变插入元素的顺序，这一点跟 Python 中的 set 不太一样——注意：但如果使用 Ipython，它会自动帮你有序显示
+        C++:
+            vector<char> vc{ 'a', 'r', 'b', 'c', 'd' };
+            unordered_set<char> hs(v.begin(), v.end());
+            for (auto i : hs)
+                cout << i << ' ';       // a b r c d
+            cout << endl;
+            hs.emplace('e');
+            for (auto i : hs)
+                cout << i << ' ';       // a b r c d e  插入位置不变
+            cout << endl;
+        Python:
+            >>> a = set('abracadabra')
+            >>> a
+            {'a', 'r', 'b', 'c', 'd'}
+            >>> a.add('e')
+            >>> a
+            {'a', 'e', 'r', 'b', 'c', 'd'}          # 'e' 的插入位置变了，但是无序
+        Ipython:
+            In [1]: a = set('abracadabra')
+            In [2]: a
+            Out[2]: {'a', 'b', 'c', 'd', 'r'}
+            In [3]: a.add('e')
+            In [4]: a
+            Out[4]: {'a', 'b', 'c', 'd', 'e', 'r'}  # 'e' 的插入位置变了，有序
+*/
+#pragma once
+
+#include "../../all.h"
+#include <set>
+#include <unordered_set>  // #include <hash_set>
+
+using namespace std;
+
+class Solution {
+public:
+    struct cmp {
+        bool operator () (int l, int r) {
+            return l > r;
+        }
+    };
+
+    void test() {
+        set<int> s1;
+        set<int> s2{ 3,1,2 };
+        vector<int> v { 3,2,1,5,4 };
+        set<int> s3(v.begin(), v.end());
+        set<int, cmp> s4(v.begin(), v.end());           // 利用仿函数构造降序集
+        set<int, greater<int>> s5(v.begin(), v.end());  // STL 提供的 greater 仿函数
+
+        // 正序遍历
+        for (auto i : s3)
+            cout << i << ' ';
+        cout << endl;
+
+        // 逆序遍历
+        for (auto it = s4.rbegin(); it != s4.rend(); it++)
+            cout << *it << ' ';
+        cout << endl;
+
+        // 增
+        s2.insert(4);  // {1,2,3,4}
+
+        // 删
+        s2.erase(3);  // {1,2,4}
+
+        // 改
+        auto it = s2.find(4);
+        if (it != s2.end()) { // 找到了
+            //
+        }
+        // 查
+        auto ii = s2.count(4);
+
+        for (auto i : s2)
+            cout << i << ' ';
+        cout << endl;
+
+        // 允许重复的集合
+        multiset<int> ms1{ 1,2,2,2,3,4 };
+        auto itp1 = ms1.find(2);  // No.2
+        auto itp2 = ms1.lower_bound(2);  // No.2
+        cout << (itp1 == itp2) << endl;  // True
+
+        auto itp3 = ms1.upper_bound(2);  // No.5
+        cout << *itp3 << endl;  // 3
+
+        // Hash Set
+        vector<char> vc{ 'a', 'r', 'b', 'c', 'd' };
+        unordered_set<char> hs(vc.begin(), vc.end());
+        for (auto i : hs)
+            cout << i << ' ';   // a b r c d
+        cout << endl;
+        hs.emplace('e');
+        for (auto i : hs)
+            cout << i << ' ';   // a b r c d e
+        cout << endl;
+    }
+
+
+};
+```
+
 
 ### 6. stack
+```cpp
+/*
+栈 stack
+    栈的性质是“先进后出”
+    其内部是使用双端队列 deque 实现的，屏蔽了部分接口
+*/
+#pragma once
 
+#include <list>
+#include <vector>
+#include <stack>
+#include <iostream>
+
+using namespace std;
+
+class Solution {
+public:
+    void test() {
+        stack<int> s1;
+        s1.push(1);
+        s1.push(2);
+        s1.push(3);
+
+        // pop() 没有返回值，因此如果需要使用弹出的值，需要先接收
+        auto top_val = s1.top();  // 3
+        s1.pop();
+
+        // 可以使用 deque 来构造 stack
+        deque<int> d1 = { 1,2,3 };
+        stack<int> s2(d1);
+
+        s2.push(4);
+        top_val = s2.top();  // 4
+        s2.pop();  // {1,2,3}
+
+    }
+
+};
+```
 ### 7. vector
+```cpp
+/*
+向量/动态数组
+    最常用的容器
+*/
+#pragma once
 
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <functional>
+
+using namespace std;
+
+class Solution {
+public:
+
+    bool is_in(vector<int> v, int target) {
+        auto it = v.begin();
+        for (; it != v.end(); it++)
+            if (*it == target)
+                break;
+        return it != v.end();
+    }
+
+    void test() {
+
+        vector<int> v1;  // {}
+        vector<int> v2 = { 1,2,3,4 };
+        vector<int> v3(3, 10);  // {10,10,10}
+        vector<int> v4(v2.begin() + 1, v2.end());  // {2,3,4}
+        vector<int> v5(v4);  // {2,3,4}
+
+        // 尾插
+        v1.push_back(3);
+        v1.push_back(2);
+        v1.push_back(1);
+        v1.pop_back();
+        for (auto i : v1)
+            cout << i << ' ';
+        cout << endl;
+
+        // 头插、指定位置插入
+        v1.insert(v1.begin() + 1, 0);
+        v1.insert(v1.begin() + 1, v2.begin(), v2.end());
+        v1.insert(v1.end(), v2.begin(), v2.end());
+        auto it = v1.erase(v1.begin() + 1);
+        cout << *it << endl;
+        for (auto i : v1)
+            cout << i << ' ';
+        cout << endl;
+
+        // 删除
+        vector<int> v6 = { 1,2,3,4,5 };
+        v6.erase(v6.begin() + 1);  // { 1,3,4,5 }
+        v6.erase(v6.begin() + 1, v6.begin() + 3);  // { 1,5 }
+        v6.clear();
+        for (auto i : v6)
+            cout << i << ' ';
+        cout << endl;
+
+        // 查找
+        it = find(v2.begin(), v2.end(), 5);
+        if (it != v2.end()) {   // 找到了，必须做一次判断，以防空迭代器异常
+            //
+        }
+
+        // 获取数组大小
+        cout << "v4 size: " << v4.size() << endl;
+
+        // 整个数组交换
+        v1.swap(v2);
+        v2.swap(v1);
+
+        // 交换内部元素
+        swap(v2[1], v2[2]);
+        swap(v2[1], v2[2]);
+
+        // 不同的遍历方法
+        cout << "v3: ";
+        for (auto i : v3)
+            cout << i << ' ';
+        cout << endl;
+
+        cout << "v4: ";
+        for (size_t i = 0; i < v4.size(); i++)
+            cout << v4[i] << ' ';
+        cout << endl;
+
+        cout << "v5: ";
+        for (auto it = v5.begin(); it != v5.end(); it++)
+            cout << *it << ' ';
+        cout << endl;
+
+        cout << "r v5: ";   // 逆序遍历
+        for (auto it = v5.rbegin(); it != v5.rend(); it++)
+            cout << *it << ' ';
+        cout << endl;
+
+        // 获取第一个/最后元素
+        v2.front() = 12;            // 因为返回的是引用，所以可以直接修改
+        v2.back() -= v2.front();
+        cout << v2.front() << ", " << v2.back() << endl;
+
+        // 判断空
+        if (v1.empty())
+            cout << "v1 is empty" << endl;
+
+        // 排序
+        // 默认升序
+        sort(v2.begin(), v2.end());
+        // 降序
+        sort(v2.begin(), v2.end(), greater<int>());
+
+        // 自定义排序
+        typedef pair<int, int> ii;
+        vector<ii> vp{ { 1,1 },{ 1,2 },{ 2,2 },{ 2,3 },{ 3,3 } };
+        sort(vp.begin(), vp.end(), [](const ii &l, const ii &r) {   // 按第一个数字升序，第二个降序
+            return l.first != r.first ? l.first < r.first : l.second > r.second;
+        });
+        for (auto i : vp)
+            cout << '{' << i.first << ',' << i.second << "} ";
+        cout << endl;
+    }
+};
+
+```
 
 ### 8. STL数据结构
 查询[[f_zyj模板]](https://github.com/f-zyj/ACM/blob/master/ACM%20%E6%A8%A1%E7%89%88-f_zyj%20%E6%9B%B4%E6%96%B0%E8%87%B3%20v%202.1/v%202.1/ACM%E6%A8%A1%E6%9D%BF-f_zyj%20v%202.1.pdf)
