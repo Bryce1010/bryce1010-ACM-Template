@@ -1404,6 +1404,8 @@ void quick_sort(Type array[],int left,int right)
 
 - [ACMer的秋招总结与经验分享](https://www.nowcoder.com/discuss/338853?type=0&order=4&pos=10&page=2)
 
+- Waking Up **计算机基础**（计算机网络/操作系统/数据库/Git...）面试问题全面总结 [[github]](https://github.com/wolverinn/Waking-Up)     
+
 
 
 
@@ -1411,7 +1413,7 @@ void quick_sort(Type array[],int left,int right)
 #### 第 176 场周赛
 - 5340. 统计有序矩阵中的负数
 - 5341. 最后 K 个数的乘积
-- 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
+- [x] 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
 - [x] 5343. 多次求和构造目标数组 [[problem]](https://leetcode-cn.com/problems/construct-target-array-with-multiple-sums/)     
 
 
