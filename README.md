@@ -1054,7 +1054,10 @@ ref:
 - 62.不同路径 [[problem]](https://leetcode-cn.com/problems/unique-paths/)  
 - 63.不同路径 II [[problem]](https://leetcode-cn.com/problems/unique-paths-ii/)  
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b729bdb30dba51eed6f42ca31281557b2f8a30ff
 #### 2、记忆化搜索   
 递推说白了就是在知道前i-1项的值的前提下，计算第i项的值，而记忆化搜索则是另外一种思路。它是直接计算第i项，需要用到第 j 项的值( j < i)时去查表，如果表里已经有第 j 项的话，则直接取出来用，否则递归计算第 j 项，并且在计算完毕后把值记录在表中。记忆化搜索在求解多维的情况下比递推更加方便。  
 
@@ -1074,12 +1077,27 @@ ref:
 
 - [ ] Number Cutting Game  [[problem]](http://acm.hdu.edu.cn/showproblem.php?pid=2848)                         ★★★☆☆
 
+<<<<<<< HEAD
 #### 3、状态和状态转移
 #### 4、最优化原理和最优子结构
 #### 5、决策和无后效性
 
 ### 二、动态规划的经典模型
 #### 1、线性模型
+=======
+#### 3、状态和状态转移  
+
+#### 4、最优化原理和最优子结构   
+#### 5、决策和无后效性   
+
+### 二、动态规划的经典模型
+#### 1、线性模型   
+- [x] 72. 编辑距离  [[problem]](https://leetcode-cn.com/problems/edit-distance/)     
+- [ ] 73. 85. 最大矩形 [[problem]](https://leetcode-cn.com/problems/maximal-rectangle/)  [[直方图O(N\*N\*M]]  [[DP O(N\*M)]]  
+
+
+
+>>>>>>> b729bdb30dba51eed6f42ca31281557b2f8a30ff
 #### 2、区间模型
 #### 3、背包模型
 #### 4、状态压缩模型
@@ -1318,7 +1336,11 @@ void quick_sort(Type array[],int left,int right)
 
 
 
+<<<<<<< HEAD
 
+=======
+- [x] 72. 编辑距离 
+>>>>>>> b729bdb30dba51eed6f42ca31281557b2f8a30ff
 ## Leetcode
 
 ### 在线平台   
@@ -1399,6 +1421,11 @@ void quick_sort(Type array[],int left,int right)
 
 - [ACMer的秋招总结与经验分享](https://www.nowcoder.com/discuss/338853?type=0&order=4&pos=10&page=2)
 
+<<<<<<< HEAD
+=======
+- Waking Up **计算机基础**（计算机网络/操作系统/数据库/Git...）面试问题全面总结 [[github]](https://github.com/wolverinn/Waking-Up)     
+
+>>>>>>> b729bdb30dba51eed6f42ca31281557b2f8a30ff
 
 
 
@@ -1406,7 +1433,11 @@ void quick_sort(Type array[],int left,int right)
 #### 第 176 场周赛
 - 5340. 统计有序矩阵中的负数
 - 5341. 最后 K 个数的乘积
+<<<<<<< HEAD
 - 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
+=======
+- [x] 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
+>>>>>>> b729bdb30dba51eed6f42ca31281557b2f8a30ff
 - [x] 5343. 多次求和构造目标数组 [[problem]](https://leetcode-cn.com/problems/construct-target-array-with-multiple-sums/)     
 
 
