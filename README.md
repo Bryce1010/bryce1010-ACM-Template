@@ -1090,7 +1090,7 @@ ref:
 ### 二、动态规划的经典模型
 #### 1、线性模型   
 - [x] 72. 编辑距离  [[problem]](https://leetcode-cn.com/problems/edit-distance/)     
-- [ ] 73. 85. 最大矩形 [[problem]](https://leetcode-cn.com/problems/maximal-rectangle/)  [[直方图O(N\*N\*M]]  [[DP O(N\*M)]]  
+- [x] 73. 85. 最大矩形 [[problem]](https://leetcode-cn.com/problems/maximal-rectangle/)  [[直方图O(N\*N\*M]]  [[DP O(N\*M)]]  
 
 
 
