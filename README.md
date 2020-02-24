@@ -1090,7 +1090,8 @@ ref:
 ### 二、动态规划的经典模型
 #### 1、线性模型   
 - [x] 72. 编辑距离  [[problem]](https://leetcode-cn.com/problems/edit-distance/)     
-- [x] 73. 85. 最大矩形 [[problem]](https://leetcode-cn.com/problems/maximal-rectangle/)  [[直方图O(N\*N\*M]]  [[DP O(N\*M)]]  
+- [x] 85. 最大矩形 [[problem]](https://leetcode-cn.com/problems/maximal-rectangle/)  [[直方图O(N\*N\*M]]  [[DP O(N\*M)]]  
+- [x] 91. 解码方法 [[problem]](https://leetcode-cn.com/problems/decode-ways/)
 
 
 
@@ -1417,6 +1418,12 @@ void quick_sort(Type array[],int left,int right)
 
 
 ### LeetCode 周赛  
+#### 第 177场周赛
+- 5169. 日期之间隔几天  
+- 5170. 验证二叉树  
+- 5171. 最接近的因数
+- 5172. 形成三的最大倍数
+
 #### 第 176 场周赛
 - 5340. 统计有序矩阵中的负数
 - 5341. 最后 K 个数的乘积
