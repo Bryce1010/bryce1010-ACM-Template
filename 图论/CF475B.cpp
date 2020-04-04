@@ -1,3 +1,7 @@
+
+//本题有多种做法, 一种是使用dfs,对每一个点dfs, 然后判断每个点经过的次数是否为m*n
+// 第二种, 判断外围环路是否成一个环?  
+
 #include<bits/stdc++.h>
 using namespace std;
 const int N=25;
