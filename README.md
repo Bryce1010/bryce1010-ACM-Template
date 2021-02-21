@@ -33,21 +33,6 @@
 
 
 
-### LeetCode 周赛  
-#### 第 177场周赛   
-
-- 5169. 日期之间隔几天  
-- 5170. 验证二叉树  
-- 5171. 最接近的因数
-- 5172. 形成三的最大倍数
-
-#### 第 176 场周赛
-- 5340. 统计有序矩阵中的负数
-- 5341. 最后 K 个数的乘积
-- 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
-- [x] 5342. 最多可以参加的会议数目 [[problem]](https://leetcode-cn.com/problems/maximum-number-of-events-that-can-be-attended/) 
-- [x] 5343. 多次求和构造目标数组 [[problem]](https://leetcode-cn.com/problems/construct-target-array-with-multiple-sums/)     
-
 
 ## Ref
 - KuangBin的ACM模板 [[github]](https://github.com/kuangbin/ACM-ICPC)  
