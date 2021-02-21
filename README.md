@@ -1,17 +1,6 @@
 
 
 
-- 表示写过且一次性过
-- [x] 表示已经写过，但是需要复习
-- [ ] 表示还没写过
-
-
-
-## Update    
-- add Back_End & Algorithm   
-- add 面试经验总结 Experience.md 
-- [ ] Dynamic Programming  
-- [ ] Deeplearning preparing  
 
 ## Leetcode
 
